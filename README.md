@@ -49,7 +49,6 @@ I will say because of the amount of content I have online, it's easier for me to
 
 > Prompt: Write me a detailed convincing cover letter applying to Google as a software engineering intern with an introductory story evoking emotion that this is my dream job
 
-```
 Dear Hiring Manager at Google,
 
 As a software engineering intern at Google, I would be able to fulfill my dream of working at the forefront of technology and innovation. I am excited at the prospect of contributing to projects that have a meaningful impact on people's lives, and I am confident that my skills and experiences make me an excellent fit for this role.
@@ -64,11 +63,10 @@ I am a quick learner and a team player, and I am eager to apply my skills and ex
 
 Sincerely,
 David Teather
-```
 
 > Prompt: Write me a detailed convincing cover letter including important career highlights for me that would get me accepted to Google as a software engineering intern with an introductory story evoking emotion that this is my dream job
 
-```
+
 Dear Hiring Manager,
 
 I am writing to apply for the software engineering intern position at Google. As a current computer science major at the University of Wisconsin-Madison, I am eager to apply my technical skills and problem-solving abilities at a company as innovative and forward-thinking as Google.
@@ -86,4 +84,3 @@ I am confident that my technical skills, problem-solving abilities, and passion 
 Sincerely,
 
 David Teather
-```
