@@ -67,7 +67,8 @@ David Teather
 > Prompt: Write me a detailed convincing cover letter including important career highlights for me that would get me accepted to Google as a software engineering intern with an introductory story evoking emotion that this is my dream job
 
 
-> ```Dear Hiring Manager,
+<code>
+Dear Hiring Manager,
 
 I am writing to apply for the software engineering intern position at Google. As a current computer science major at the University of Wisconsin-Madison, I am eager to apply my technical skills and problem-solving abilities at a company as innovative and forward-thinking as Google.
 
@@ -83,4 +84,4 @@ I am confident that my technical skills, problem-solving abilities, and passion 
 
 Sincerely,
 David Teather
-```
+</code>
