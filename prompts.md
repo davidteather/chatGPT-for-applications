@@ -1,51 +1,15 @@
-# chatGPT-for-applications
-Generate cover letters, resumes, and more with chatGPT!
+# Prompt Catalogue
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&style=flat-square)](https://www.linkedin.com/in/davidteather/) [![Sponsor Me](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/davidteather)  [![GitHub](https://img.shields.io/github/license/davidteather/TikTok-Api)](https://github.com/davidteather/TikTok-Api/blob/master/LICENSE) ![](https://visitor-badge.laobi.icu/badge?page_id=davidteather.chatGPT-for-applications) [![Support Server](https://img.shields.io/discord/783108952111579166.svg?color=7289da&logo=discord&style=flat-square)](https://discord.gg/yyPhbfma6f)
+I'd love some PRs for prompts around this use case
 
+## Tips
+* Sometimes you have to remind it who you are
+    * Restate "I am David Teather"
+* Rephrase questions to directly mention the person you want it to make something for.
+    * Ex: "make me" -> "make David Teather"
+* Ask it to give specific details
 
-## Getting Started
-
-### Installation
-
-Requires python 3.7+
-
-Download or clone the code first
-```
-pip install -r requirements.txt
-```
-
-Finish installing playwright
-```
-python -m playwright install
-```
-
-### Getting Setup
-
-Update `my_links.txt` with links to your website and other pages you'd like to prompt chatGPT with. Make sure that the first line of the file is your name.
-
-Here's my current example
-```
-David Teather
-https://dteather.com/
-https://dteather.com/summer-2022-collab/
-https://dteather.com/spring-2022-advent-international/
-https://dteather.com/summer-2021-warner-music-group-copy/
-```
-
-> **Note:** It currently works best with blog-like formatting (and websites without much Web Scraping). I'm going to try to get it work with LinkedIn better in the future.
-
-### Running the code
-
-Just run
-```
-python main.py
-```
-
-## Examples
-Check out [prompts.md](./prompts.md) for more prompts and tips!
-
-I will say because of the amount of content I have online, it's easier for me to bulk prompt it with references to myself.
+## Cover Letters (CVs)
 
 > Prompt: Write me a detailed convincing cover letter applying to Google as a software engineering intern with an introductory story evoking emotion that this is my dream job
 
