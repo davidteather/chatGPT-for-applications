@@ -49,10 +49,18 @@ class chatGPT:
             self.chat_page.fill("textarea", prompt)
 
             if not self.first_prompt:
-                self.chat_page.wait_for_selector("#__next > div > div.flex.flex-1.flex-col.md\:pl-52.h-full > main > div.Thread__PositionForm-sc-15plnpr-3.kWvvEa > form > div > div.PromptTextarea__LastItemActions-sc-4snkpf-3.gRmLdg > button", timeout=300000)
+                self.chat_page.wait_for_selector(self.btn_selector, timeout=300000)
+            
+            # TODO: Probably can just hit enter on the textarea, but still need a way to detect when the chat is done
+            btn_selector_1 = "#__next > div > div.flex.flex-1.flex-col.md\:pl-52.h-full > main > div.Thread__PositionForm-sc-15plnpr-3.kWvvEa > form > div > div.PromptTextarea__LastItemActions-sc-4snkpf-3.gRmLdg > button"
+            btn = self.chat_page.query_selector(btn_selector_1)
+            self.btn_selector = btn_selector_1
+            if btn is None:
+                btn_selector_2 = "#__next > div > div.flex.flex-1.flex-col.md\:pl-52.h-full > main > div.sc-15plnpr-3.jqdtxi > form > div > div.sc-4snkpf-0.iLrIMi > button"
+                btn = self.chat_page.query_selector(btn_selector_2)
+                self.btn_selector = btn_selector_2
 
-            button_selector = "#__next > div > div.flex.flex-1.flex-col.md\:pl-52.h-full > main > div.Thread__PositionForm-sc-15plnpr-3.kWvvEa > form > div > div.PromptTextarea__TextareaWrapper-sc-4snkpf-0.jpDygc > button"
-            self.chat_page.click(button_selector)
+            btn.click()
 
             self.first_prompt = False
 
