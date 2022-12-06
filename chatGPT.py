@@ -1,6 +1,7 @@
 from playwright.sync_api import sync_playwright, Page
 import os
 import json
+import time
 
 '''
     This class is used to interact with chatGPT on the website
@@ -41,26 +42,19 @@ class chatGPT:
             self.chat_page.click("text=Next")
         self.chat_page.click("text=Done")
             
+        # Wait for the chat to load
+        time.sleep(1)
 
     def send_prompts(self, prompts: list):
         # Send each prompt to the chatGPT chat
         for prompt in prompts:
-            # Type into a textarea element
+            # Type into a textarea element and hit the enter key to submit
             self.chat_page.fill("textarea", prompt)
 
-            if not self.first_prompt:
-                self.chat_page.wait_for_selector(self.btn_selector, timeout=300000)
-            
-            # TODO: Probably can just hit enter on the textarea, but still need a way to detect when the chat is done
-            btn_selector_1 = "#__next > div > div.flex.flex-1.flex-col.md\:pl-52.h-full > main > div.Thread__PositionForm-sc-15plnpr-3.kWvvEa > form > div > div.PromptTextarea__LastItemActions-sc-4snkpf-3.gRmLdg > button"
-            btn = self.chat_page.query_selector(btn_selector_1)
-            self.btn_selector = btn_selector_1
-            if btn is None:
-                btn_selector_2 = "#__next > div > div.flex.flex-1.flex-col.md\:pl-52.h-full > main > div.sc-15plnpr-3.jqdtxi > form > div > div.sc-4snkpf-0.iLrIMi > button"
-                btn = self.chat_page.query_selector(btn_selector_2)
-                self.btn_selector = btn_selector_2
-
-            btn.click()
+            # If a prompt is still processing we wait
+            while self.chat_page.query_selector(".text-2xl"):
+                pass
+            self.chat_page.press("textarea", "Enter")
 
             self.first_prompt = False
 
