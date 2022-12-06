@@ -42,6 +42,8 @@ Just run
 python main.py
 ```
 
+Make sure you follow instructions in the terminal after that!
+
 ## Examples
 Check out [prompts.md](./prompts.md) for more prompts and tips!
 
